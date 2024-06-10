@@ -1,29 +1,104 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './App.css';
-import backgroundImage from './images/backgroundImg.jpg'; 
+import logoImage from './images/logo.png';
+import backgroundImage from './images/backgroundImg.png';
+import aboutBackground from './images/aboutBackground.png';
+import productsBackground from './images/productsBackground.png';
+import contactBackground from './images/contactBackground.png';
 
 function App() {
+  const [background, setBackground] = useState(backgroundImage);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const home = useRef(null);
+  const aboutRef = useRef(null);
+  const productsRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const handleScroll = (ref, newBackground) => {
+    ref.current.scrollIntoView({ behavior: 'smooth' });
+    setBackground(newBackground);
+    setIsMenuOpen(false); 
+  };
+
+  useEffect(() => {
+    const sections = [
+      { ref: home, background: backgroundImage },
+      { ref: aboutRef, background: aboutBackground },
+      { ref: productsRef, background: productsBackground },
+      { ref: contactRef, background: contactBackground },
+    ];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const section = sections.find(sec => sec.ref.current === entry.target);
+            if (section) {
+              setBackground(section.background);
+            }
+          }
+        });
+      },
+      { threshold: 0.6 } 
+    );
+
+    sections.forEach(section => {
+      if (section.ref.current) {
+        observer.observe(section.ref.current);
+      }
+    });
+
+    return () => {
+      sections.forEach(section => {
+        if (section.ref.current) {
+          observer.unobserve(section.ref.current);
+        }
+      });
+    };
+  }, []);
+
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundImage: `url(${background})` }}>
       <header className="App-header">
         <nav>
           <div className="logo">
-            <span>TERRA GRANDE FARM</span>
+            <button className="logo-button" onClick={() => handleScroll(home, backgroundImage)}>
+              <img src={logoImage} alt="Logo" className="logo-image" />
+              TERRA GRANDE FARM
+            </button>
           </div>
-          <ul className="nav-links">
-            <li><a href="#about">ABOUT US</a></li>
-            <li><a href="#products">PRODUCTS</a></li>
-            <li><a href="#contact">CONTACT US</a></li>
+          <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            ☰
+          </button>
+          <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+            <li><button onClick={() => handleScroll(aboutRef, aboutBackground)}>ABOUT US</button></li>
+            <li><button onClick={() => handleScroll(productsRef, productsBackground)}>PRODUCTS</button></li>
+            <li><button onClick={() => handleScroll(contactRef, contactBackground)}>CONTACT US</button></li>
           </ul>
         </nav>
       </header>
       <main>
-      <div className="bg-section" style={{ backgroundImage: `url(${backgroundImage})` }}>
-          <div className="hero-text">
+        <section ref={home} className="bg-section home-section">
+          <div className="home-text">
             <h1>TERRA GRANDE FARM</h1>
-            <p style={{color: 'white', fontSize: '20px', fontFamily: 'Arial, sans-serif'}}>A 10-hectare Regenerative Goat Farm breeding top-quality upgraded and Purebred Anglo-Nubians.</p>
+            <p style={{ color: 'white', fontSize: '20px', fontFamily: 'Arial, sans-serif' }}>
+              A 10-hectare Regenerative Goat Farm breeding top-quality upgraded and Purebred Anglo-Nubians.
+            </p>
           </div>
-        </div>
+        </section>
+        <section ref={aboutRef} className="content-section">
+          <h2>About Us</h2>
+          <p>This is the About Us section.</p>
+        </section>
+        <section ref={productsRef} className="content-section">
+          <h2>Products</h2>
+          <p>This is the Products section.</p>
+        </section>
+        <section ref={contactRef} className="content-section">
+          <h2>Contact Us</h2>
+          <p>This is the Contact Us section.</p>
+        </section>
       </main>
     </div>
   );
