@@ -1,3 +1,6 @@
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import About from "./pages/about";
 import React, { useRef, useState, useEffect } from 'react';
 import './App.css';
 import logoImage from './images/logo.png';
@@ -68,8 +71,8 @@ function App() {
               TERRA GRANDE FARM
             </button>
           </div>
-          <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            ☰
+          <button className={`menu-toggle ${isMenuOpen ? 'close' : ''}`} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? '☷' : '☰'}
           </button>
           <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
             <li><button onClick={() => handleScroll(aboutRef, aboutBackground)}>ABOUT US</button></li>
@@ -89,15 +92,15 @@ function App() {
         </section>
         <section ref={aboutRef} className="content-section">
           <h2>About Us</h2>
-          <p>This is the About Us section.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </section>
         <section ref={productsRef} className="content-section">
           <h2>Products</h2>
-          <p>This is the Products section.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </section>
         <section ref={contactRef} className="content-section">
           <h2>Contact Us</h2>
-          <p>This is the Contact Us section.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </section>
       </main>
     </div>
