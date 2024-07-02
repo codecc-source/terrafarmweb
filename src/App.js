@@ -4,10 +4,10 @@ import About from "./pages/about";
 import React, { useRef, useState, useEffect } from 'react';
 import './App.css';
 import logoImage from './images/logo.png';
-import backgroundImage from './images/backgroundImg.png';
-import aboutBackground from './images/aboutBackground.png';
-import productsBackground from './images/productsBackground.png';
-import contactBackground from './images/contactBackground.png';
+import backgroundImage from './images/backgroundImg.jpg';
+import aboutBackground from './images/aboutBackground.jpg';
+import productsBackground from './images/productsBackground.jpg';
+import contactBackground from './images/contactBackground.jpg';
 
 function App() {
   const [background, setBackground] = useState(backgroundImage);
@@ -85,7 +85,7 @@ function App() {
         <section ref={home} className="bg-section home-section">
           <div className="home-text">
             <h1>TERRA GRANDE FARM</h1>
-            <p style={{ color: 'white', fontSize: '20px', fontFamily: 'Arial, sans-serif' }}>
+            <p style={{ color: 'white', fontSize: '20px' }}>
               A 10-hectare Regenerative Goat Farm breeding top-quality upgraded and Purebred Anglo-Nubians.
             </p>
           </div>
@@ -100,7 +100,9 @@ function App() {
         </section>
         <section ref={contactRef} className="content-section">
           <h2>Contact Us</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a style={{ fontSize: '1.5rem', display: 'block', color: 'white', transition: 'transform 0.3s, filter 0.3s'}} href="mailto:businessEmail" >
+              <img src={process.env.PUBLIC_URL + '/images/emailClose.png'}style={{ width: '50px', height: '50px' }}alt="email"className='emailOpen'/>
+            </a>
         </section>
       </main>
     </div>
@@ -108,3 +110,4 @@ function App() {
 }
 
 export default App;
+

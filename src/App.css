@@ -1,12 +1,13 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Abril Fatface", serif;
   height: 100%;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
   /*scroll-padding-top: 50px;*/
 }
+
 
 #root {
   height: 100%;
@@ -22,8 +23,10 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  transition: background-image 0.5s ease-in-out;
+  background-attachment: fixed;
+  transition: background-image 0.2s ease-in-out;
 }
+
 
 .App-header {
   background-color: rgba(11, 36, 0, 0.8);
@@ -121,7 +124,7 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .home-section {
@@ -151,9 +154,12 @@ main {
   padding: 40px 20px;
   width: 100%;
   color: #ffffff;
-  text-align: left;
   box-sizing: border-box;
   min-height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
