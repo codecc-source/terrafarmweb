@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   font-family: "Abril Fatface", serif;
@@ -7,7 +8,6 @@ body, html {
   scroll-snap-type: y mandatory;
   /*scroll-padding-top: 50px;*/
 }
-
 
 #root {
   height: 100%;
@@ -25,12 +25,12 @@ section {
   background-position: center center;
   background-attachment: fixed;
   transition: background-image 0.2s ease-in-out;
+  align-items: center;
 }
-
 
 .App-header {
   background-color: rgba(11, 36, 0, 0.8);
-  padding: 10px 20px;
+  padding: 15px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 10;
   position: fixed;
@@ -60,6 +60,10 @@ nav {
   color: #ffffff;
 }
 
+.logo-button:hover {
+  color: rgb(36, 233, 141, 0.377);
+}
+
 .logo-button .logo-image {
   height: 40px;
   margin-right: 10px;
@@ -72,9 +76,9 @@ nav {
   font-size: 1.5rem;
   cursor: pointer;
   position: absolute;
-  top: 15px; 
-  right: 60px; 
-  z-index: 15; 
+  top: 15px;
+  right: 60px;
+  z-index: 15;
   color: #ffffff;
 }
 
@@ -89,14 +93,21 @@ nav {
   background: none;
   border: none;
   color: #ffffff;
-  padding: 10px 20px; 
+  padding: 10px 20px;
   cursor: pointer;
   font-size: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-links button:hover {
+  transition: all 0.5s ease-in-out;
+  color: black;
+  background-color: rgba(36, 233, 141, 0.377);
 }
 
 @media (min-width: 768px) {
   .nav-links button {
-    padding: 10px 50px; 
+    padding: 10px 50px;
   }
 }
 
@@ -105,7 +116,7 @@ main {
   width: 100%;
   color: white;
   position: relative;
-  padding-top: 60px; 
+  padding-top: 60px;
 }
 
 .bg-section {
@@ -118,7 +129,7 @@ main {
 }
 
 .bg-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -127,31 +138,8 @@ main {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.home-section {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.home-text {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-}
-
-.home-text h1 {
-  font-size: 4rem;
-  margin: 0;
-}
-
-.home-text p {
-  font-size: 1.5rem;
-}
-
 .content-section {
-  padding: 40px 20px;
+  padding: 1px 20px;
   width: 100%;
   color: #ffffff;
   box-sizing: border-box;
@@ -159,7 +147,6 @@ main {
   background: rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 1;
-  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -171,17 +158,17 @@ main {
     flex-direction: column;
     position: absolute;
     top: 60px;
-    right: 10px; 
-    width: 100%; 
+    right: 10px;
+    width: 100%;
     background-color: rgba(11, 36, 0, 0.8);
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.3s ease;
-    z-index: 5; 
+    z-index: 5;
   }
 
   .nav-links.open {
-    max-height: 300px; 
+    max-height: 300px;
   }
 
   .nav-links li {
@@ -190,9 +177,107 @@ main {
 
   .nav-links button {
     padding: 15px;
-    width: 100%; 
+    width: 100%;
     text-align: left;
   }
 }
 
+.productBox{
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  align-items: center;
+}
+
+.prodImgContainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+}
+
+.prodImg{
+  position: relative;
+  width: 100%;
+  max-height: 300px; /*Crops images*/
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.prodImg a img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.prodImg:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-text {
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.glide {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  position: relative; 
+}
+
+.glide__arrows {
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 10; 
+}
+
+.glide__arrow {
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.glide__arrow:hover {
+  color: rgba(59, 197, 0, 0.8);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.glide__arrow--left {
+  left: 10px; 
+}
+
+.glide__arrow--right {
+  right: 10px; 
+}
 
