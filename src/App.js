@@ -9,8 +9,8 @@ import productsBackground from "./images/productsBackground.jpg";
 import contactBackground from "./images/contactBackground.jpg";
 import emailClose from "./images/emailClose.png";
 import goat from "./images/goatProduct.png";
-import Glide from '@glidejs/glide';
-import '@glidejs/glide/dist/css/glide.core.min.css';
+import Glide from "@glidejs/glide";
+import "@glidejs/glide/dist/css/glide.core.min.css";
 
 function App() {
   const [background, setBackground] = useState(backgroundImage);
@@ -69,11 +69,11 @@ function App() {
   useEffect(() => {
     const glide = new Glide(".glide", {
       type: "slider",
-      perView: 2, 
-      focusAt: "center", 
+      perView: 2,
+      focusAt: "center",
       breakpoints: {
         768: {
-          perView: 1, 
+          perView: 1,
         },
       },
     });
@@ -84,7 +84,6 @@ function App() {
       glide.destroy();
     };
   }, []);
-
 
   return (
     <div className="App" style={{ backgroundImage: `url(${background})` }}>
@@ -149,7 +148,7 @@ function App() {
             and Purebred Anglo-Nubians.
           </p>
         </section>
-        
+
         <section ref={aboutRef} className="content-section">
           <p style={{ fontSize: "5rem" }}>About Us</p>
           <p>
@@ -158,14 +157,13 @@ function App() {
           </p>
         </section>
 
-
         <section ref={productsRef} className="content-section">
-          <p style={{ fontSize: "5rem" }}>Products</p>
+          <br/>
+          <p className="productsText">Products</p>
 
           <div className="glide">
             <div className="glide__track" data-glide-el="track">
               <ul className="glide__slides">
-
                 <li className="glide__slide">
                   <div className="productBox">
                     <div className="prodImgContainer">
@@ -173,18 +171,24 @@ function App() {
                         <a>
                           <img src={goat} alt="product1" />
                           <div className="overlay">
-                            <p className="overlay-text" style={{fontSize: "3rem"}}>Product 1 </p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-                            dolor sit amet, consectetur adipiscing elit.
+                            <p
+                              className="overlay-text"
+                              style={{ fontSize: "3rem" }}
+                            >
+                              Product 1{" "}
+                            </p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit.
                           </div>
                         </a>
                       </div>
                     </div>
                   </div>
                   <div className="textMView">
-                    <p style={{fontSize: "3rem"}}>Product 1 </p> 
-                    <p style={{fontSize: "1rem"}}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    <p style={{ fontSize: "1.2rem" }}>Product 1 </p>
+                    <p style={{ fontSize: "1rem" }}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
@@ -198,18 +202,24 @@ function App() {
                         <a>
                           <img src={logoImage} alt="product2" />
                           <div className="overlay">
-                            <p className="overlay-text" style={{fontSize: "3rem"}}>Product 2 </p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-                            dolor sit amet, consectetur adipiscing elit.
+                            <p
+                              className="overlay-text"
+                              style={{ fontSize: "3rem" }}
+                            >
+                              Product 2{" "}
+                            </p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit.
                           </div>
                         </a>
                       </div>
                     </div>
                   </div>
                   <div className="textMView">
-                    <p style={{fontSize: "3rem"}}>Product 2 </p>
-                    <p style={{fontSize: "1rem"}}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    <p style={{ fontSize: "1.2rem" }}>Product 2 </p>
+                    <p style={{ fontSize: "1rem" }}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
@@ -223,18 +233,24 @@ function App() {
                         <a>
                           <img src={background} alt="product3" />
                           <div className="overlay">
-                            <p className="overlay-text" style={{fontSize: "3rem"}}>Product 3 </p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-                            dolor sit amet, consectetur adipiscing elit.
+                            <p
+                              className="overlay-text"
+                              style={{ fontSize: "3rem" }}
+                            >
+                              Product 3{" "}
+                            </p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit.
                           </div>
                         </a>
                       </div>
                     </div>
                   </div>
                   <div className="textMView">
-                    <p style={{fontSize: "3rem"}}>Product 3 </p>
-                    <p style={{fontSize: "1rem"}}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    <p style={{ fontSize: "1.2rem" }}>Product 3 </p>
+                    <p style={{ fontSize: "1rem" }}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
@@ -248,18 +264,24 @@ function App() {
                         <a>
                           <img src={backgroundImage} alt="product4" />
                           <div className="overlay">
-                            <p className="overlay-text" style={{fontSize: "3rem"}}>Product 4 </p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-                            dolor sit amet, consectetur adipiscing elit.
+                            <p
+                              className="overlay-text"
+                              style={{ fontSize: "3rem" }}
+                            >
+                              Product 4{" "}
+                            </p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit.
                           </div>
                         </a>
                       </div>
                     </div>
                   </div>
                   <div className="textMView">
-                    <p style={{fontSize: "3rem"}}>Product 4 </p>
-                    <p style={{fontSize: "1rem"}}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    <p style={{ fontSize: "1.2rem" }}>Product 4 </p>
+                    <p style={{ fontSize: "1rem" }}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
@@ -269,8 +291,20 @@ function App() {
             </div>
 
             <div className="glide__arrows" data-glide-el="controls">
-              <button style={{outline : "none"}} className="glide__arrow glide__arrow--left" data-glide-dir="<">◄</button>
-              <button style={{outline : "none"}} className="glide__arrow glide__arrow--right" data-glide-dir=">">►</button>
+              <button
+                style={{ outline: "none" }}
+                className="glide__arrow glide__arrow--left"
+                data-glide-dir="<"
+              >
+                ◄
+              </button>
+              <button
+                style={{ outline: "none" }}
+                className="glide__arrow glide__arrow--right"
+                data-glide-dir=">"
+              >
+                ►
+              </button>
             </div>
           </div>
         </section>
@@ -278,14 +312,18 @@ function App() {
         <section ref={contactRef} className="content-section">
           <p style={{ fontSize: "4.2rem" }}>Contact Us</p>
           <div className="contactContainer">
-
             <div className="contactSpacing">
               <a href="mailto:businessEmail">
                 <lord-icon
-                    src="https://cdn.lordicon.com/aycieyht.json"
-                    trigger="hover"
-                    style={{width: "100%", height: "60px", backgroundColor: "white", borderRadius: "50px"}}>
-                </lord-icon>
+                  src="https://cdn.lordicon.com/aycieyht.json"
+                  trigger="hover"
+                  style={{
+                    width: "100%",
+                    height: "60px",
+                    backgroundColor: "white",
+                    borderRadius: "50px",
+                  }}
+                ></lord-icon>
               </a>
               {/* <a href="mailto:businessEmail" className="emailMobile">
                 <lord-icon
@@ -298,24 +336,33 @@ function App() {
 
             <div className="contactSpacing">
               <a href="messengerlink">
-              <lord-icon
+                <lord-icon
                   src="https://cdn.lordicon.com/shlffxcb.json"
                   trigger="hover"
-                  style={{width: "100%", height: "60px", backgroundColor: "white", borderRadius: "50px"}}>
-              </lord-icon>
+                  style={{
+                    width: "100%",
+                    height: "60px",
+                    backgroundColor: "white",
+                    borderRadius: "50px",
+                  }}
+                ></lord-icon>
               </a>
             </div>
 
             <div className="contactSpacing">
               <a>
-              <lord-icon
+                <lord-icon
                   src="https://cdn.lordicon.com/cywksamr.json"
                   trigger="hover"
-                  style={{width: "100%", height: "60px", backgroundColor: "white", borderRadius: "50px"}}>
-              </lord-icon>
+                  style={{
+                    width: "100%",
+                    height: "60px",
+                    backgroundColor: "white",
+                    borderRadius: "50px",
+                  }}
+                ></lord-icon>
               </a>
             </div>
-
           </div>
         </section>
       </main>

@@ -12,8 +12,11 @@ html {
 #root {
   height: 100%;
 }
+
 section {
   scroll-snap-align: start;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .App {
@@ -287,6 +290,10 @@ main {
   margin: 20px;
 }
 
+.productsText{
+  font-size: 5rem;
+}
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -342,6 +349,16 @@ main {
     transition: none;
   }
   
+  .productBox {
+    flex-direction: column;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    border: 2px solid rgba(255, 255, 255, 0.171);
+    border-radius: 10px;
+    align-items: center;
+  }
+
   .productBox:hover{
     border: 2px solid rgba(255, 255, 255, 0.171);
   }
@@ -360,4 +377,11 @@ main {
     background: rgba(0, 0, 0, 0.103);
   }
   
+  .logo-button:hover {
+    color: rgb(255, 255, 255);
+  }
+
+  .productsText{
+    font-size: 2.5rem;
+  }
 }
