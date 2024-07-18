@@ -165,11 +165,12 @@ function App() {
           <div className="glide">
             <div className="glide__track" data-glide-el="track">
               <ul className="glide__slides">
+
                 <li className="glide__slide">
                   <div className="productBox">
                     <div className="prodImgContainer">
                       <div className="prodImg">
-                        <a href="#">
+                        <a>
                           <img src={goat} alt="product1" />
                           <div className="overlay">
                             <p className="overlay-text" style={{fontSize: "3rem"}}>Product 1 </p>
@@ -180,14 +181,22 @@ function App() {
                       </div>
                     </div>
                   </div>
+                  <div className="textMView">
+                    <p style={{fontSize: "3rem"}}>Product 1 </p> 
+                    <p style={{fontSize: "1rem"}}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                  </div>
                 </li>
 
                 <li className="glide__slide">
                   <div className="productBox">
                     <div className="prodImgContainer">
                       <div className="prodImg">
-                        <a href="#">
-                          <img src={logoImage} alt="product1" />
+                        <a>
+                          <img src={logoImage} alt="product2" />
                           <div className="overlay">
                             <p className="overlay-text" style={{fontSize: "3rem"}}>Product 2 </p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
@@ -197,14 +206,22 @@ function App() {
                       </div>
                     </div>
                   </div>
+                  <div className="textMView">
+                    <p style={{fontSize: "3rem"}}>Product 2 </p>
+                    <p style={{fontSize: "1rem"}}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                  </div>
                 </li>
 
                 <li className="glide__slide">
                   <div className="productBox">
                     <div className="prodImgContainer">
                       <div className="prodImg">
-                        <a href="#">
-                          <img src={background} alt="product1" />
+                        <a>
+                          <img src={background} alt="product3" />
                           <div className="overlay">
                             <p className="overlay-text" style={{fontSize: "3rem"}}>Product 3 </p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
@@ -214,14 +231,22 @@ function App() {
                       </div>
                     </div>
                   </div>
+                  <div className="textMView">
+                    <p style={{fontSize: "3rem"}}>Product 3 </p>
+                    <p style={{fontSize: "1rem"}}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                  </div>
                 </li>
 
                 <li className="glide__slide">
                   <div className="productBox">
                     <div className="prodImgContainer">
                       <div className="prodImg">
-                        <a href="#">
-                          <img src={backgroundImage} alt="product1" />
+                        <a>
+                          <img src={backgroundImage} alt="product4" />
                           <div className="overlay">
                             <p className="overlay-text" style={{fontSize: "3rem"}}>Product 4 </p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
@@ -231,35 +256,67 @@ function App() {
                       </div>
                     </div>
                   </div>
+                  <div className="textMView">
+                    <p style={{fontSize: "3rem"}}>Product 4 </p>
+                    <p style={{fontSize: "1rem"}}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                  </div>
                 </li>
               </ul>
             </div>
 
             <div className="glide__arrows" data-glide-el="controls">
-              <button className="glide__arrow glide__arrow--left" data-glide-dir="<">◄</button>
-              <button className="glide__arrow glide__arrow--right" data-glide-dir=">">►</button>
+              <button style={{outline : "none"}} className="glide__arrow glide__arrow--left" data-glide-dir="<">◄</button>
+              <button style={{outline : "none"}} className="glide__arrow glide__arrow--right" data-glide-dir=">">►</button>
             </div>
           </div>
         </section>
 
         <section ref={contactRef} className="content-section">
           <p style={{ fontSize: "4.2rem" }}>Contact Us</p>
-          <a
-            style={{
-              fontSize: "1.5rem",
-              display: "block",
-              color: "white",
-              transition: "transform 0.3s, filter 0.3s",
-            }}
-            href="mailto:businessEmail"
-          >
-            <img
-              src={emailClose}
-              style={{ width: "50px", height: "50px" }}
-              alt="email"
-              className="emailOpen"
-            />
-          </a>
+          <div className="contactContainer">
+
+            <div className="contactSpacing">
+              <a href="mailto:businessEmail">
+                <lord-icon
+                    src="https://cdn.lordicon.com/aycieyht.json"
+                    trigger="hover"
+                    style={{width: "100%", height: "60px", backgroundColor: "white", borderRadius: "50px"}}>
+                </lord-icon>
+              </a>
+              {/* <a href="mailto:businessEmail" className="emailMobile">
+                <lord-icon
+                    src="https://cdn.lordicon.com/aycieyht.json"
+                    trigger="hover"
+                    style={{width: "50px", height: "50px", backgroundColor: "white", borderRadius: "50px"}}>
+                </lord-icon>
+              </a> */}
+            </div>
+
+            <div className="contactSpacing">
+              <a href="messengerlink">
+              <lord-icon
+                  src="https://cdn.lordicon.com/shlffxcb.json"
+                  trigger="hover"
+                  style={{width: "100%", height: "60px", backgroundColor: "white", borderRadius: "50px"}}>
+              </lord-icon>
+              </a>
+            </div>
+
+            <div className="contactSpacing">
+              <a>
+              <lord-icon
+                  src="https://cdn.lordicon.com/cywksamr.json"
+                  trigger="hover"
+                  style={{width: "100%", height: "60px", backgroundColor: "white", borderRadius: "50px"}}>
+              </lord-icon>
+              </a>
+            </div>
+
+          </div>
         </section>
       </main>
     </div>

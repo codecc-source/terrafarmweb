@@ -29,9 +29,9 @@ section {
 }
 
 .App-header {
-  background-color: rgba(11, 36, 0, 0.8);
-  padding: 15px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(11, 36, 0, 0.699);
+  backdrop-filter: blur(3px);
+  padding: 14px 20px;
   z-index: 10;
   position: fixed;
   width: 100%;
@@ -99,16 +99,10 @@ nav {
   transition: all 0.5s ease-in-out;
 }
 
-.nav-links button:hover {
+.nav-links button:hover { /*navigation*/
   transition: all 0.5s ease-in-out;
   color: black;
   background-color: rgba(36, 233, 141, 0.377);
-}
-
-@media (min-width: 768px) {
-  .nav-links button {
-    padding: 10px 50px;
-  }
 }
 
 main {
@@ -149,46 +143,17 @@ main {
   z-index: 1;
 }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    width: 100%;
-    background-color: rgba(11, 36, 0, 0.8);
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.3s ease;
-    z-index: 5;
-  }
-
-  .nav-links.open {
-    max-height: 300px;
-  }
-
-  .nav-links li {
-    margin: 0;
-  }
-
-  .nav-links button {
-    padding: 15px;
-    width: 100%;
-    text-align: left;
-  }
-}
-
 .productBox{
   flex-direction: column;
   display: flex;
   width: 100%;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid rgba(255, 255, 255, 0.171);
   border-radius: 10px;
   align-items: center;
+}
+
+.productBox:hover{
+  border: none;
 }
 
 .prodImgContainer{
@@ -199,6 +164,10 @@ main {
   align-items: center;
 }
 
+.prodImgContainer:hover{
+  border-radius: 10px;
+}
+
 .prodImg{
   position: relative;
   width: 100%;
@@ -206,6 +175,13 @@ main {
   display: flex;
   align-items: center;
   overflow: hidden;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.prodImg:hover{
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
 }
 
 .prodImg a img{
@@ -220,7 +196,9 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  /* background: rgba(0, 0, 0, 0.288); */
+  background: linear-gradient(to bottom,rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.5) 100%);
+  backdrop-filter: blur(2px);
   color: white;
   display: flex;
   flex-direction: column;
@@ -230,6 +208,7 @@ main {
   transition: opacity 0.3s ease;
   padding: 20px;
   box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .prodImg:hover .overlay {
@@ -260,17 +239,17 @@ main {
 }
 
 .glide__arrow {
-  background: rgba(0, 0, 0, 0.5);
-  font-size: 2rem;
+  font-size: 3rem;
   cursor: pointer;
   color: #ffffff;
-  padding: 10px;
   transition: color 0.3s ease;
+  padding: 0;
+  border: none;
+  background: none;
 }
 
 .glide__arrow:hover {
   color: rgba(59, 197, 0, 0.8);
-  background: rgba(255, 255, 255, 0.5);
 }
 
 .glide__arrow--left {
@@ -281,3 +260,104 @@ main {
   right: 10px; 
 }
 
+.glide__track{
+  margin: auto;
+}
+
+.contactContainer{
+  flex-direction: column;
+  display: flex;
+  width: 50%;
+  border-radius: 40px;
+  margin: auto;
+  background-color: #00000044;
+  backdrop-filter: blur(3px);
+  justify-content: center;
+}
+
+.textMView{
+  display: none;
+}
+
+/* .emailMobile{
+  display: none;
+} */
+
+.contactSpacing{
+  margin: 20px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 100%;
+    /* background-color: rgba(11, 36, 0, 0.8); */
+    background: linear-gradient(to top,rgba(0, 0, 0, 0) 0%,rgba(11, 36, 0, 0.699) 100%);
+    backdrop-filter: blur(2px);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+    z-index: 5;
+  }
+
+  .nav-links.open {
+    max-height: 300px;
+    transition: ease-in-out 0.5s;
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  .nav-links button {
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+  }     
+
+  .nav-links button {
+    padding: 10px 50px;
+  }
+
+  .textMView{
+    display: block;
+    background: rgba(0, 0, 0, 0.171);
+    border-radius: 50px;
+    backdrop-filter: blur(4px);
+  }
+
+  .prodImg:hover .overlay {
+    opacity: 0;
+  }
+
+  .prodImg:hover{
+    transform: none;
+    transition: none;
+  }
+  
+  .productBox:hover{
+    border: 2px solid rgba(255, 255, 255, 0.171);
+  }
+  
+  .prodImgContainer:hover{
+    border-radius: 10px;
+  }
+  
+  .prodImg:hover{
+    transform: none;
+    transition: none;
+  }
+
+  .glide__arrow:hover {
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.103);
+  }
+  
+}
