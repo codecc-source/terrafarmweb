@@ -324,14 +324,10 @@ main {
   }
 
   .nav-links button {
-    padding: 15px;
+    padding: 10px 50px;
     width: 100%;
     text-align: left;
   }     
-
-  .nav-links button {
-    padding: 10px 50px;
-  }
 
   .textMView{
     display: block;
