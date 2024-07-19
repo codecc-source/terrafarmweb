@@ -17,6 +17,7 @@ section {
   scroll-snap-align: start;
   min-height: 100vh;
   overflow: hidden;
+  padding: 0;
 }
 
 .App {
@@ -29,6 +30,7 @@ section {
   background-attachment: fixed;
   transition: background-image 0.2s ease-in-out;
   align-items: center;
+  padding: 0;
 }
 
 .App-header {
@@ -45,11 +47,13 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  padding: 0;
 }
 
 .logo-button {
@@ -61,6 +65,7 @@ nav {
   font-weight: bold;
   cursor: pointer;
   color: #ffffff;
+  padding: 0;
 }
 
 .logo-button:hover {
@@ -83,13 +88,14 @@ nav {
   right: 60px;
   z-index: 15;
   color: #ffffff;
+  padding: 0;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   margin: 0;
-  /* padding: 0; */
+  padding: 0;
 }
 
 .nav-links button {
@@ -114,17 +120,18 @@ main {
   width: 100%;
   color: white;
   position: relative;
-  padding-top: 0;
+  padding: 0;
   min-height: 100vh;
 }
 
-.bg-section {
+/* .bg-section {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100%;
   position: relative;
+  padding: 0;
 }
 
 .bg-section::before {
@@ -135,10 +142,10 @@ main {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
-}
+} */
 
 .content-section {
-  padding: 0px 20px;
+  padding: 0;
   width: 100%;
   color: #ffffff;
   box-sizing: border-box;
@@ -155,6 +162,7 @@ main {
   border: 2px solid rgba(255, 255, 255, 0.171);
   border-radius: 10px;
   align-items: center;
+  padding: 0;
 }
 
 .productBox:hover{
@@ -167,6 +175,7 @@ main {
   display: flex;
   overflow: hidden;
   align-items: center;
+  padding: 0;
 }
 
 .prodImgContainer:hover{
@@ -182,6 +191,7 @@ main {
   overflow: hidden;
   border-radius: 10px;
   transition: 0.3s ease-in-out;
+  padding: 0;
 }
 
 .prodImg:hover{
@@ -193,6 +203,7 @@ main {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  padding: 0;
 }
 
 .overlay {
@@ -211,7 +222,7 @@ main {
   justify-content: center;
   opacity: 0;
   transition: opacity 0.3s ease;
-  padding: 20px;
+  padding: 0;
   box-sizing: border-box;
   border-radius: 10px;
 }
@@ -221,6 +232,7 @@ main {
 }
 
 .overlay-text {
+  padding: 0;
   margin: 0;
   font-size: 1.5rem;
   text-align: center;
@@ -231,6 +243,7 @@ main {
   max-width: 1200px;
   margin: 20px auto;
   position: relative; 
+  padding: 0;
 }
 
 .glide__arrows {
@@ -239,6 +252,7 @@ main {
   justify-content: space-between;
   width: 100%;
   z-index: 10; 
+  padding: 0;
 }
 
 .glide__arrow {
@@ -298,15 +312,16 @@ main {
   font-size: 4.2rem;
 }
 
-.homepageText p{
+.pageText p{
   font-size: 5rem;
 }
 
-.homepageText h1{
+.pageText h1{
   font-size: 20px;
   font-family: "Abril Fatface", serif;
   font-style: normal;
   font-weight: 100;
+  color: #ffffff;
 }
 
 @media screen and (min-width:376px) and (max-width:812px){
@@ -317,7 +332,7 @@ main {
   .nav-links {
     flex-direction: column;
     position: absolute;
-    top: 70px;
+    top: 68px;
     right: 10px;
     width: 100%;
     /* background-color: rgba(11, 36, 0, 0.8); */
@@ -327,19 +342,22 @@ main {
     max-height: 0;
     transition: max-height 0.5s ease;
     z-index: 5;
+    padding: 0;
   }
 
   .nav-links.open {
     max-height: 300px;
     transition: ease-in-out 0.5s;
+    padding: 0;
   }
 
   .nav-links li {
     margin: 0;
+    padding: 0;
   }
 
   .nav-links button {
-    padding: 10px 0;
+    padding: 10px;
     width: 100%;
     text-align: center;
   }     
@@ -349,7 +367,7 @@ main {
   }
 
   .content-section {
-    padding: 20px; /*  padding for content section */
+    padding: 0; /*  padding for content section */
   }
   
   .textMView{
@@ -357,10 +375,14 @@ main {
     background: rgba(0, 0, 0, 0.171);
     border-radius: 50px;
     backdrop-filter: blur(4px);
+    padding: 0;
   }
 
   .textMView p {
     font-size: 1rem; /* text size for mobile view */
+    font-weight: 100;
+    font-style: normal;
+    padding: 0;
   }
 
   .prodImg:hover .overlay {
@@ -376,10 +398,12 @@ main {
     flex-direction: column;
     display: flex;
     width: 90%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     border: 2px solid rgba(255, 255, 255, 0.171);
     border-radius: 10px;
     align-items: center;
+    padding: 0;
   }
 
   .productBox:hover{
@@ -403,6 +427,7 @@ main {
   .glide__slide img {
     width: 100%; /*  carousel images  */
     height: auto;
+    padding: 0;
   }
   
   .logo-button:hover {
@@ -411,16 +436,34 @@ main {
 
   .productsText{
     font-size: 2.5rem;
+    padding: 0;
   }
 
   .contactSize{
     font-size: 3rem;
+    padding: 0;
   }
 
   .contactSpacing{
     margin: 8px;
+    padding: 0;
+  }
+
+  .pageText p{
+    font-size: 4.5rem;
+    padding: 0;
+  }
+  
+  .pageText h1{
+    font-size: 18px;
+    font-family: "Abril Fatface", serif;
+    font-style: normal;
+    font-weight: 100;
+    color: #ffffff;
+    padding: 0;
   }
 }
+
 
  @media (min-width:320px) and (max-width:375px){ /*smaller phone screens */
   .menu-toggle {
@@ -430,7 +473,7 @@ main {
   .nav-links {
     flex-direction: column;
     position: absolute;
-    top: 70px;
+    top: 68px;
     right: 10px;
     width: 100%;
     /* background-color: rgba(11, 36, 0, 0.8); */
@@ -440,15 +483,18 @@ main {
     max-height: 0;
     transition: max-height 0.5s ease;
     z-index: 5;
+    padding: 0;
   }
 
   .nav-links.open {
     max-height: 300px;
     transition: ease-in-out 0.5s;
+    padding: 0;
   }
 
   .nav-links li {
     margin: 0;
+    padding: 0;
   }
 
   .nav-links button {
@@ -459,10 +505,11 @@ main {
 
   .logo-button {
     font-size: 0.8rem; /* font size for logo button */
+    padding: 0;
   }
 
   .content-section {
-    padding: 20px; /*  padding for content section */
+    padding: 0; /*  padding for content section */
   }
   
   .textMView{
@@ -470,10 +517,14 @@ main {
     background: rgba(0, 0, 0, 0.171);
     border-radius: 50px;
     backdrop-filter: blur(4px);
+    padding: 0;
   }
 
-  .textMView p {
+  .textMView p{
     font-size: 0.8rem; /* text size for mobile view */
+    font-style: normal;
+    font-weight: 100;
+    padding: 0;
   }
 
   .prodImg:hover .overlay {
@@ -489,10 +540,12 @@ main {
     flex-direction: column;
     display: flex;
     width: 90%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     border: 2px solid rgba(255, 255, 255, 0.171);
     border-radius: 10px;
     align-items: center;
+    padding: 0;
   }
 
   .productBox:hover{
@@ -516,6 +569,7 @@ main {
   .glide__slide img {
     width: 100%; /*  carousel images  */
     height: auto;
+    padding: 0;
   }
   
   .logo-button:hover {
@@ -524,14 +578,31 @@ main {
 
   .productsText{
     font-size: 2rem;
+    padding: 0;
   }
 
   .contactSize{
     font-size: 2.5rem;
+    padding: 0;
   }
 
   .contactSpacing{
     margin: 8px;
+    padding: 0;
+  }
+
+  .pageText p{
+    font-size: 3.5rem;
+    padding: 0;
+  }
+  
+  .pageText h1{
+    font-size: 15px;
+    font-family: "Abril Fatface", serif;
+    font-style: normal;
+    font-weight: 100;
+    color: #ffffff;
+    padding: 0;
   }
 }
 

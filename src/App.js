@@ -147,9 +147,9 @@ function App() {
           className="content-section"
           style={{ alignContent: "center" }}
         >
-          <div className="homepageText">
+          <div className="pageText">
             <p>TERRA GRANDE FARM</p>
-            <h1 style={{ color: "white", fontSize: "20px" }}>
+            <h1>
               A 10-hectare Regenerative Goat Farm breeding top-quality upgraded
               and Purebred Anglo-Nubians.
             </h1>
@@ -157,11 +157,13 @@ function App() {
         </section>
 
         <section ref={aboutRef} className="content-section">
-          <p style={{ fontSize: "5rem" }}>About Us</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit.
-          </p>
+          <div className="pageText">
+              <p>About Us</p>
+              <h1>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Lorem ipsum dolor sit amet, consecteturadipiscing elit.
+              </h1>
+            </div>
         </section>
 
         <section ref={productsRef} className="content-section">
@@ -194,7 +196,7 @@ function App() {
                   </div>
                   <div className="textMView">
                     <p style={{ fontSize: "1.2rem" }}>Product 1 </p>
-                    <p style={{ fontSize: "1rem" }}>
+                    <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -318,62 +320,56 @@ function App() {
 
         <section ref={contactRef} className="content-section">
           <div className="contactSize">
+            <div className="pageText"> 
 
-            <p>Contact Us</p>
-            <div className="contactContainer">
-              <div>  {/*className="contactSpacing"*/}
-                <a href="mailto:businessEmail">
-                  <lord-icon
-                    src="https://cdn.lordicon.com/aycieyht.json"
-                    trigger="hover"
-                    style={{
-                      width: "100%",
-                      height: "60px",
-                      backgroundColor: "white",
-                      borderRadius: "50px",
-                    }}
-                  ></lord-icon>
-                </a>
-                {/* <a href="mailto:businessEmail" className="emailMobile">
-                  <lord-icon
+              <p>Contact Us</p>
+              <div className="contactContainer">
+                <div>  {/*className="contactSpacing"*/}
+                  <a href="mailto:businessEmail">
+                    <lord-icon
                       src="https://cdn.lordicon.com/aycieyht.json"
                       trigger="hover"
-                      style={{width: "50px", height: "50px", backgroundColor: "white", borderRadius: "50px"}}>
-                  </lord-icon>
-                </a> */}
-              </div>
+                      style={{
+                        width: "100%",
+                        height: "60px",
+                        backgroundColor: "white",
+                        borderRadius: "50px",
+                      }}
+                    ></lord-icon>
+                  </a>
+                </div>
 
-              <div> {/*className="contactSpacing"*/}
-                <a href="messengerlink">
-                  <lord-icon
-                    src="https://cdn.lordicon.com/shlffxcb.json"
-                    trigger="hover"
-                    style={{
-                      width: "100%",
-                      height: "60px",
-                      backgroundColor: "white",
-                      borderRadius: "50px",
-                    }}
-                  ></lord-icon>
-                </a>
-              </div>
+                <div> {/*className="contactSpacing"*/}
+                  <a href="messengerlink">
+                    <lord-icon
+                      src="https://cdn.lordicon.com/shlffxcb.json"
+                      trigger="hover"
+                      style={{
+                        width: "100%",
+                        height: "60px",
+                        backgroundColor: "white",
+                        borderRadius: "50px",
+                      }}
+                    ></lord-icon>
+                  </a>
+                </div>
 
-              <div> {/*className="contactSpacing"*/}
-                <a>
-                  <lord-icon
-                    src="https://cdn.lordicon.com/cywksamr.json"
-                    trigger="hover"
-                    style={{
-                      width: "100%",
-                      height: "60px",
-                      backgroundColor: "white",
-                      borderRadius: "50px",
-                    }}
-                  ></lord-icon>
-                </a>
+                <div> {/*className="contactSpacing"*/}
+                  <a>
+                    <lord-icon
+                      src="https://cdn.lordicon.com/cywksamr.json"
+                      trigger="hover"
+                      style={{
+                        width: "100%",
+                        height: "60px",
+                        backgroundColor: "white",
+                        borderRadius: "50px",
+                      }}
+                    ></lord-icon>
+                  </a>
+                </div>
               </div>
-            </div>
-                      
+            </div>    
           </div>
         </section>
       </main>
