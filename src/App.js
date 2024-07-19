@@ -147,11 +147,13 @@ function App() {
           className="content-section"
           style={{ alignContent: "center" }}
         >
-          <p style={{ fontSize: "5rem" }}>TERRA GRANDE FARM</p>
-          <p style={{ color: "white", fontSize: "20px" }}>
-            A 10-hectare Regenerative Goat Farm breeding top-quality upgraded
-            and Purebred Anglo-Nubians.
-          </p>
+          <div className="homepageText">
+            <p>TERRA GRANDE FARM</p>
+            <h1 style={{ color: "white", fontSize: "20px" }}>
+              A 10-hectare Regenerative Goat Farm breeding top-quality upgraded
+              and Purebred Anglo-Nubians.
+            </h1>
+          </div>
         </section>
 
         <section ref={aboutRef} className="content-section">
@@ -315,59 +317,63 @@ function App() {
         </section>
 
         <section ref={contactRef} className="content-section">
-          <p style={{ fontSize: "4.2rem" }}>Contact Us</p>
-          <div className="contactContainer">
-            <div className="contactSpacing">
-              <a href="mailto:businessEmail">
-                <lord-icon
-                  src="https://cdn.lordicon.com/aycieyht.json"
-                  trigger="hover"
-                  style={{
-                    width: "100%",
-                    height: "60px",
-                    backgroundColor: "white",
-                    borderRadius: "50px",
-                  }}
-                ></lord-icon>
-              </a>
-              {/* <a href="mailto:businessEmail" className="emailMobile">
-                <lord-icon
+          <div className="contactSize">
+
+            <p>Contact Us</p>
+            <div className="contactContainer">
+              <div>  {/*className="contactSpacing"*/}
+                <a href="mailto:businessEmail">
+                  <lord-icon
                     src="https://cdn.lordicon.com/aycieyht.json"
                     trigger="hover"
-                    style={{width: "50px", height: "50px", backgroundColor: "white", borderRadius: "50px"}}>
-                </lord-icon>
-              </a> */}
-            </div>
+                    style={{
+                      width: "100%",
+                      height: "60px",
+                      backgroundColor: "white",
+                      borderRadius: "50px",
+                    }}
+                  ></lord-icon>
+                </a>
+                {/* <a href="mailto:businessEmail" className="emailMobile">
+                  <lord-icon
+                      src="https://cdn.lordicon.com/aycieyht.json"
+                      trigger="hover"
+                      style={{width: "50px", height: "50px", backgroundColor: "white", borderRadius: "50px"}}>
+                  </lord-icon>
+                </a> */}
+              </div>
 
-            <div className="contactSpacing">
-              <a href="messengerlink">
-                <lord-icon
-                  src="https://cdn.lordicon.com/shlffxcb.json"
-                  trigger="hover"
-                  style={{
-                    width: "100%",
-                    height: "60px",
-                    backgroundColor: "white",
-                    borderRadius: "50px",
-                  }}
-                ></lord-icon>
-              </a>
-            </div>
+              <div> {/*className="contactSpacing"*/}
+                <a href="messengerlink">
+                  <lord-icon
+                    src="https://cdn.lordicon.com/shlffxcb.json"
+                    trigger="hover"
+                    style={{
+                      width: "100%",
+                      height: "60px",
+                      backgroundColor: "white",
+                      borderRadius: "50px",
+                    }}
+                  ></lord-icon>
+                </a>
+              </div>
 
-            <div className="contactSpacing">
-              <a>
-                <lord-icon
-                  src="https://cdn.lordicon.com/cywksamr.json"
-                  trigger="hover"
-                  style={{
-                    width: "100%",
-                    height: "60px",
-                    backgroundColor: "white",
-                    borderRadius: "50px",
-                  }}
-                ></lord-icon>
-              </a>
+              <div> {/*className="contactSpacing"*/}
+                <a>
+                  <lord-icon
+                    src="https://cdn.lordicon.com/cywksamr.json"
+                    trigger="hover"
+                    style={{
+                      width: "100%",
+                      height: "60px",
+                      backgroundColor: "white",
+                      borderRadius: "50px",
+                    }}
+                  ></lord-icon>
+                </a>
+              </div>
             </div>
+                      
           </div>
         </section>
       </main>

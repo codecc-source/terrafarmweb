@@ -235,8 +235,6 @@ main {
 
 .glide__arrows {
   position: absolute;
-  top: 50%; 
-  transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -266,7 +264,8 @@ main {
 }
 
 .glide__track{
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contactContainer{
@@ -274,7 +273,8 @@ main {
   display: flex;
   width: 50%;
   border-radius: 40px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #00000044;
   backdrop-filter: blur(3px);
   justify-content: center;
@@ -284,19 +284,32 @@ main {
   display: none;
 }
 
-/* .emailMobile{
-  display: none;
+/* .contactSpacing{
+  margin-bottom: auto;
+  margin-top: auto;
+  overflow: hidden;
 } */
-
-.contactSpacing{
-  margin: 20px;
-}
 
 .productsText{
   font-size: 5rem;
 }
 
-@media screen and (min-width:320px) and (max-width:812px){
+.contactSize{
+  font-size: 4.2rem;
+}
+
+.homepageText p{
+  font-size: 5rem;
+}
+
+.homepageText h1{
+  font-size: 20px;
+  font-family: "Abril Fatface", serif;
+  font-style: normal;
+  font-weight: 100;
+}
+
+@media screen and (min-width:376px) and (max-width:812px){
   .menu-toggle {
     display: block;
   }
@@ -304,7 +317,7 @@ main {
   .nav-links {
     flex-direction: column;
     position: absolute;
-    /* top: 70px; */
+    top: 70px;
     right: 10px;
     width: 100%;
     /* background-color: rgba(11, 36, 0, 0.8); */
@@ -326,7 +339,7 @@ main {
   }
 
   .nav-links button {
-    /* padding: 10px 0; */
+    padding: 10px 0;
     width: 100%;
     text-align: center;
   }     
@@ -336,7 +349,7 @@ main {
   }
 
   .content-section {
-    /* padding: 20px;  padding for content section */
+    padding: 20px; /*  padding for content section */
   }
   
   .textMView{
@@ -384,7 +397,7 @@ main {
 
   .glide__arrow:hover {
     color: #ffffff;
-    background: rgba(0, 0, 0, 0.103);
+    background: none;
   }
 
   .glide__slide img {
@@ -399,4 +412,126 @@ main {
   .productsText{
     font-size: 2.5rem;
   }
+
+  .contactSize{
+    font-size: 3rem;
+  }
+
+  .contactSpacing{
+    margin: 8px;
+  }
 }
+
+ @media (min-width:320px) and (max-width:375px){ /*smaller phone screens */
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 100%;
+    /* background-color: rgba(11, 36, 0, 0.8); */
+    background: linear-gradient(to top,rgba(0, 0, 0, 0) 0%,rgba(11, 36, 0, 0.699) 100%);
+    backdrop-filter: blur(2px);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+    z-index: 5;
+  }
+
+  .nav-links.open {
+    max-height: 300px;
+    transition: ease-in-out 0.5s;
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  .nav-links button {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }     
+
+  .logo-button {
+    font-size: 0.8rem; /* font size for logo button */
+  }
+
+  .content-section {
+    padding: 20px; /*  padding for content section */
+  }
+  
+  .textMView{
+    display: block;
+    background: rgba(0, 0, 0, 0.171);
+    border-radius: 50px;
+    backdrop-filter: blur(4px);
+  }
+
+  .textMView p {
+    font-size: 0.8rem; /* text size for mobile view */
+  }
+
+  .prodImg:hover .overlay {
+    opacity: 0;
+  }
+
+  .prodImg:hover{
+    transform: none;
+    transition: none;
+  }
+  
+  .productBox {
+    flex-direction: column;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    border: 2px solid rgba(255, 255, 255, 0.171);
+    border-radius: 10px;
+    align-items: center;
+  }
+
+  .productBox:hover{
+    border: 2px solid rgba(255, 255, 255, 0.171);
+  }
+  
+  .prodImgContainer:hover{
+    border-radius: 10px;
+  }
+  
+  .prodImg:hover{
+    transform: none;
+    transition: none;
+  }
+
+  .glide__arrow:hover {
+    color: #ffffff;
+    background: none;
+  }
+
+  .glide__slide img {
+    width: 100%; /*  carousel images  */
+    height: auto;
+  }
+  
+  .logo-button:hover {
+    color: rgb(255, 255, 255);
+  }
+
+  .productsText{
+    font-size: 2rem;
+  }
+
+  .contactSize{
+    font-size: 2.5rem;
+  }
+
+  .contactSpacing{
+    margin: 8px;
+  }
+}
+
