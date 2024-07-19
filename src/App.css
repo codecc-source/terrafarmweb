@@ -296,39 +296,7 @@ main {
   font-size: 5rem;
 }
 
-@media screen and (max-width: 768px) {
-  body,
-  html {
-    margin: 0;
-    padding: 0;
-    font-family: "Abril Fatface", serif;
-    height: 100vh;
-    overflow-x: hidden;
-    scroll-snap-type: y mandatory;
-    /*scroll-padding-top: 50px;*/
-  }
-
-  #root {
-    height: 100vh;
-  }
-
-  section {
-    scroll-snap-align: start;
-    max-height: 100vh;
-    overflow: hidden;
-  }
-
-  .content-section {
-    padding: 0px 20px;
-    width: 100%;
-    color: #ffffff;
-    box-sizing: border-box;
-    min-height: 100vh;
-    background: rgba(0, 0, 0, 0.3);
-    position: relative;
-    z-index: 1;
-  }
-
+@media screen and (min-width:320px) and (max-width:812px){
   .menu-toggle {
     display: block;
   }
@@ -358,16 +326,28 @@ main {
   }
 
   .nav-links button {
-    padding: 10px 50px;
+    padding: 10px 0;
     width: 100%;
-    text-align: left;
+    text-align: center;
   }     
 
+  .logo-button {
+    font-size: 1rem; /* font size for logo button */
+  }
+
+  .content-section {
+    padding: 20px; /*  padding for content section */
+  }
+  
   .textMView{
     display: block;
     background: rgba(0, 0, 0, 0.171);
     border-radius: 50px;
     backdrop-filter: blur(4px);
+  }
+
+  .textMView p {
+    font-size: 1rem; /* text size for mobile view */
   }
 
   .prodImg:hover .overlay {
@@ -405,6 +385,11 @@ main {
   .glide__arrow:hover {
     color: #ffffff;
     background: rgba(0, 0, 0, 0.103);
+  }
+
+  .glide__slide img {
+    width: 100%; /*  carousel images  */
+    height: auto;
   }
   
   .logo-button:hover {

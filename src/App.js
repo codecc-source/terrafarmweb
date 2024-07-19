@@ -75,6 +75,11 @@ function App() {
         768: {
           perView: 1,
         },
+        576: {
+          perView: 1,
+          gap: 10,
+          peek: { before: 50, after: 50 },
+        },
       },
     });
 
