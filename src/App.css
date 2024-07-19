@@ -9,10 +9,6 @@ html {
   /*scroll-padding-top: 50px;*/
 }
 
-div{
-  padding: 0;
-}
-
 #root {
   height: 100vh;
 }
