@@ -6,6 +6,7 @@ html {
   height: 100vh;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
+  overscroll-behavior: none;
   /*scroll-padding-top: 50px;*/
 }
 
@@ -14,9 +15,10 @@ html {
 }
 
 section {
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   min-height: 100vh;
   overflow: hidden;
+  overscroll-behavior: none;
   padding: 0;
 }
 
@@ -468,7 +470,7 @@ main {
 }
 
 
- @media (min-width:320px) and (max-width:375px){ /*smaller phone screens */
+@media (min-width:320px) and (max-width:375px){ /*smaller phone screens */
   .menu-toggle {
     display: block;
   }
