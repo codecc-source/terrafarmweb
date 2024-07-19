@@ -91,7 +91,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App" style={{ backgroundImage: `url(${background})` }}>
+    <div className="App" style={{backgroundImage: `url(${background})`, padding: "0", margin: "0"}}>
       <header className="App-header">
         <nav>
           <div className="logo">
