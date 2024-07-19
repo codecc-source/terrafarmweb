@@ -310,10 +310,12 @@ main {
 
 .contactSize{
   font-size: 4.2rem;
+  padding: 0;
 }
 
 .pageText p{
   font-size: 5rem;
+  padding: 0;
 }
 
 .pageText h1{
@@ -322,6 +324,7 @@ main {
   font-style: normal;
   font-weight: 100;
   color: #ffffff;
+  padding: 0;
 }
 
 @media screen and (min-width:376px) and (max-width:812px){

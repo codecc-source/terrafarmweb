@@ -141,7 +141,7 @@ function App() {
           </ul>
         </nav>
       </header>
-      <main>
+      <main style={{ padding: "0", margin: "0" }}>
         <section
           ref={home}
           className="content-section"
