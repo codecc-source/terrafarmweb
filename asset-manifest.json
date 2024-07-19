@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/terrafarmweb/static/css/main.b52b5847.css",
-    "main.js": "/terrafarmweb/static/js/main.4bedb865.js",
+    "main.css": "/terrafarmweb/static/css/main.8e4cff1b.css",
+    "main.js": "/terrafarmweb/static/js/main.2df13fc9.js",
     "static/js/453.4ee2e86d.chunk.js": "/terrafarmweb/static/js/453.4ee2e86d.chunk.js",
     "static/media/productsBackground.jpg": "/terrafarmweb/static/media/productsBackground.5c4a9887531ded35ad73.jpg",
     "static/media/contactBackground.jpg": "/terrafarmweb/static/media/contactBackground.ef49310330a991581021.jpg",
@@ -11,12 +11,12 @@
     "static/media/logo.png": "/terrafarmweb/static/media/logo.754e01552b7fd57c172f.png",
     "static/media/emailClose.png": "/terrafarmweb/static/media/emailClose.1b555a7150854c172dc3.png",
     "index.html": "/terrafarmweb/index.html",
-    "main.b52b5847.css.map": "/terrafarmweb/static/css/main.b52b5847.css.map",
-    "main.4bedb865.js.map": "/terrafarmweb/static/js/main.4bedb865.js.map",
+    "main.8e4cff1b.css.map": "/terrafarmweb/static/css/main.8e4cff1b.css.map",
+    "main.2df13fc9.js.map": "/terrafarmweb/static/js/main.2df13fc9.js.map",
     "453.4ee2e86d.chunk.js.map": "/terrafarmweb/static/js/453.4ee2e86d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b52b5847.css",
-    "static/js/main.4bedb865.js"
+    "static/css/main.8e4cff1b.css",
+    "static/js/main.2df13fc9.js"
   ]
 }
